@@ -1,0 +1,158 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/notebook-bg.png'); /* Example background image of a notebook */
+    background-size: cover;
+}
+
+/* Styles specific to the main menu */
+.main-menu-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('/static/kids-doodles.png'); /* Example of kid-friendly doodles */
+    background-size: contain;
+    text-align: center; /* Center the text and buttons */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-menu-container h1 {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.centered-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 200px; /* Set a fixed width for uniformity */
+}
+
+.menu-button:hover {
+    background-color: #45a049;
+}
+
+/* Original styles for the other pages */
+.notebook-container, .menu-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('/static/kids-doodles.png'); /* Example of kid-friendly doodles */
+    background-size: contain;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.send-button {
+    background-color: #4CAF50;
+    color: white;
+    float: left;
+}
+
+.send-button:hover {
+    background-color: #45a049;
+}
+
+.back-button {
+    background-color: #f44336;
+    color: white;
+    float: right;
+}
+
+.back-button:hover {
+    background-color: #e53935;
+}
+
+.next-button {
+    background-color: #2196F3;
+    color: white;
+    float: left;
+}
+
+.next-button:hover {
+    background-color: #1e88e5;
+}
+
+.option-button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 2px solid #008CBA;
+    cursor: pointer;
+    width: 100%; /* Make the options full-width */
+}
+
+.option-button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.notebook-log {
+    height: 400px; /* Adjust this height to fit your design */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.large-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.options-container {
+    max-height: 200px; /* Adjust the height of the options container */
+    overflow-y: auto;  /* Add scrolling if options exceed the height */
+    padding-right: 10px; /* Padding to avoid scrollbar overlay */
+}
+
+.button-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform - Main Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="main-menu-container">
+        <h1>Welcome to the Learning Platform</h1>
+        <div class="centered-buttons">
+            <button class="menu-button" onclick="window.location.href='/conversation'">Start a Conversation</button>
+            <button class="menu-button" onclick="window.location.href='/game'">Play a Game</button>
+        </div>
+    </div>
+</body>
+</html>

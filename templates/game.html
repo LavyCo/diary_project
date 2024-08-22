@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game - Notebook Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="notebook-container">
+        <h2>Word Game</h2>
+        <div id="game-log" class="notebook-log">
+            <div id="question"></div> <!-- The question will be displayed here -->
+            <div id="options" class="options-container"></div> <!-- The options will be displayed here -->
+        </div>
+        <div class="button-container">
+            <button class="next-button" onclick="loadNextQuestion()">Next Question</button>
+            <button class="back-button" onclick="goBackToMenu()">Back to Menu</button>
+        </div>
+    </div>
+
+    <script>
+        function loadNextQuestion() {
+            fetch('/next_question', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("question").innerHTML = `<p>${data.question}</p>`;
+                const optionsDiv = document.getElementById("options");
+                optionsDiv.innerHTML = '';
+                data.options.forEach((option, index) => {
+                    optionsDiv.innerHTML += `<button class="option-button" onclick="checkAnswer(${index}, ${data.correct_index})">${option}</button>`;
+                });
+            });
+        }
+
+        function checkAnswer(selectedIndex, correctIndex) {
+            if (selectedIndex === correctIndex) {
+                alert("Correct! Well done!");
+            } else {
+                alert("Oops, that's not right. Try again!");
+            }
+            loadNextQuestion();
+        }
+
+        function goBackToMenu() {
+            window.location.href = "/";
+        }
+
+        window.onload = loadNextQuestion;
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - Child's Notebook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="notebook-container">
+        <h2>Child's Notebook</h2>
+        <div id="conversation-log" class="notebook-log"></div>
+        <input type="text" id="user-input" placeholder="Write here..." class="large-input">
+        <div class="button-container">
+            <button class="send-button" onclick="sendMessage()">Send</button>
+            <button class="back-button" onclick="goBackToMenu()">Back to Menu</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById("user-input").value;
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const log = document.getElementById("conversation-log");
+                log.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
+                log.innerHTML += `<p><strong>AI:</strong> ${data.response}</p>`;
+                document.getElementById("user-input").value = '';
+                log.scrollTop = log.scrollHeight;
+            });
+        }
+
+        function goBackToMenu() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>
