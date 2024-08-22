@@ -1,5 +1,4 @@
 
-
 # AI-Powered Educational Game for Kids
 
 ## Overview
@@ -11,6 +10,27 @@ This project is an AI-powered educational application designed to help children 
 - **Interactive Conversation**: The child can chat with the AI in a natural way. The AI corrects spelling and grammar mistakes in the background without interrupting the conversation.
 - **Educational Word Games**: The game tests the child's understanding of words and their meanings. Words corrected during the conversation are used as game content to reinforce learning.
 - **Friendly User Interface**: The application has a kid-friendly design, making it easy and fun for children to interact with the AI.
+
+## Screenshots
+
+### Main Menu
+![Main Menu](./menu.png)
+
+### Conversation Screen
+![Conversation Screen](./conversation.png)
+
+### Word Game
+![Word Game](./game.png)
+
+### Game - Correct Answer
+![Correct Answer](./game%20try%20correct.png)
+
+### Game - Incorrect Answer
+![Incorrect Answer](./game%20try%20not%20correct.png)
+
+### Another View of the Game
+![Another View of the Game](./game2.png)
+
 
 ## Installation
 
@@ -62,4 +82,3 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 - **OpenAI** for providing the language models that power the AI agents.
 - **Flask** for being a simple and effective framework for building web applications.
 - **All contributors** who helped in building and improving this project.
-
