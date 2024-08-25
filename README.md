@@ -10,7 +10,8 @@ This project is an AI-powered educational application designed to help children 
 - **Interactive Conversation**: The child can chat with the AI in a natural way. The AI corrects spelling and grammar mistakes in the background without interrupting the conversation.
 - **Educational Word Games**: The game tests the child's understanding of words and their meanings. Words corrected during the conversation are used as game content to reinforce learning.
 - **Friendly User Interface**: The application has a kid-friendly design, making it easy and fun for children to interact with the AI.
-
+## Video
+https://youtu.be/IPMq4nyS_1A
 ## Screenshots
 
 ### Main Menu
